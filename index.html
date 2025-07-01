@@ -444,6 +444,12 @@
         let invoices = JSON.parse(localStorage.getItem('invoices')) || {};
         let currentWorkshopId = null;
 
+        // فتح مودال إضافة ورشة
+        function openAddWorkshopModal() {
+            document.getElementById('addWorkshopForm').reset();
+            openModal('addWorkshopModal');
+        }
+
         // عرض الورش
         function displayWorkshops() {
             const container = document.getElementById('workshopsContainer');
